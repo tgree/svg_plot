@@ -1,0 +1,8 @@
+[MESSAGES CONTROL]
+disable=bad-whitespace,
+        missing-module-docstring,
+        invalid-name,
+        too-many-arguments,
+        too-many-locals,
+        too-many-nested-blocks,
+        too-many-instance-attributes
