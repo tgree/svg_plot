@@ -1,8 +1,10 @@
 [MESSAGES CONTROL]
 disable=bad-whitespace,
         missing-module-docstring,
+        missing-class-docstring,
         invalid-name,
         too-many-arguments,
         too-many-locals,
         too-many-nested-blocks,
-        too-many-instance-attributes
+        too-many-instance-attributes,
+        too-few-public-methods
