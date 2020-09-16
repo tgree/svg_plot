@@ -16,10 +16,11 @@ class ExtentMapper:
 
 
 class Point:
-    def __init__(self, x, y, r=1, attrs=None):
+    def __init__(self, x, y, r=1, color=0x1F77B4, attrs=None):
         self.x     = x
         self.y     = y
         self.r     = r
+        self.color = color
         self.attrs = attrs or {}
 
 
@@ -77,7 +78,8 @@ class Plot:
 
         for p in self.points:
             sr.add_circle(margin_l + x_map(p.x), margin_t + y_map(p.y),
-                          max(p.r, 1), style="fill:#1f77b4;stroke:transparent;",
+                          max(p.r, 1),
+                          style=("fill:#%x;stroke:transparent;" % p.color),
                           **p.attrs)
 
         for l, t in zip(x_ticks.get_d_locs(), x_ticks.get_d_labels(fmt=x_fmt)):
